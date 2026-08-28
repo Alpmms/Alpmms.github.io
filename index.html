@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Metehan Alp Memiş — Transportation Geotechnics &amp; Data-Centric AI</title>
-<meta name="description" content="Metehan Alp Memiş — PhD researcher at the University of Illinois Urbana-Champaign working at the intersection of transportation geotechnics and interpretable, data-centric machine learning for civil infrastructure." />
-<meta name="author" content="Metehan Alp Memiş" />
+<title>Metehan Alp Memis | Transportation Geotechnics &amp; Data-Centric AI</title>
+<meta name="description" content="Metehan Alp Memis, PhD researcher at the University of Illinois Urbana-Champaign working on transportation geotechnics and interpretable, data-centric machine learning for civil infrastructure." />
+<meta name="author" content="Metehan Alp Memis" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Metehan Alp Memiş — Transportation Geotechnics & Data-Centric AI" />
-<meta property="og:description" content="PhD researcher (UIUC) — interpretable machine learning, transportation geotechnics, and civil-infrastructure data." />
+<meta property="og:title" content="Metehan Alp Memis | Transportation Geotechnics & Data-Centric AI" />
+<meta property="og:description" content="PhD researcher (UIUC): AI and interpretable machine learning for transportation geotechnics and civil infrastructure." />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,267 +16,201 @@
 
 <style>
   :root {
-    --ink:      #16232e;
-    --ink-2:    #2b3b47;
-    --stone:    #6a6455;
-    --paper:    #f5f3ec;
-    --panel:    #eeebe1;
-    --line:     #d7d2c4;
-    --line-2:   #c6c0af;
-    --ochre:    #a8722a;
-    --ochre-dk: #8a5c1f;
-    --clay:     #7c8b6f;
-
-    --f-display: "Fraunces", Georgia, serif;
-    --f-body:    "Inter", system-ui, -apple-system, sans-serif;
-    --f-mono:    "JetBrains Mono", ui-monospace, monospace;
-
-    --maxw: 1080px;
-    --gutter: clamp(20px, 5vw, 64px);
+    --ink:#16232e; --ink-2:#2b3b47; --stone:#6a6455;
+    --paper:#f5f3ec; --panel:#eeebe1; --line:#d7d2c4; --line-2:#c6c0af;
+    --ochre:#a8722a; --ochre-dk:#8a5c1f; --clay:#7c8b6f;
+    --f-display:"Fraunces",Georgia,serif; --f-body:"Inter",system-ui,-apple-system,sans-serif; --f-mono:"JetBrains Mono",ui-monospace,monospace;
+    --maxw:1080px; --gutter:clamp(20px,5vw,64px);
   }
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto} *{animation:none!important;transition:none!important} }
+  body { margin:0; background:var(--paper); color:var(--ink); font-family:var(--f-body); font-size:17px; line-height:1.6; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; }
+  a { color:inherit; }
+  ::selection { background:rgba(168,114,42,0.22); }
+  .wrap { max-width:var(--maxw); margin:0 auto; padding-inline:var(--gutter); }
 
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-    * { animation: none !important; transition: none !important; }
-  }
-
-  body {
-    margin: 0; background: var(--paper); color: var(--ink);
-    font-family: var(--f-body); font-size: 17px; line-height: 1.6;
-    -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
-  }
-  a { color: inherit; }
-  ::selection { background: rgba(168,114,42,0.22); }
-  .wrap { max-width: var(--maxw); margin: 0 auto; padding-inline: var(--gutter); }
-
-  /* strata rule */
-  .strata {
-    height: 10px; width: 100%;
+  .strata { height:10px; width:100%;
     background:
-      linear-gradient(var(--ochre), var(--ochre)) 0 0 / 100% 2px no-repeat,
-      linear-gradient(var(--line-2), var(--line-2)) 0 3px / 100% 1px no-repeat,
-      linear-gradient(var(--clay), var(--clay)) 0 5px / 100% 2px no-repeat,
-      linear-gradient(var(--line), var(--line)) 0 8px / 100% 1px no-repeat;
-    opacity: .8;
+      linear-gradient(var(--ochre),var(--ochre)) 0 0/100% 2px no-repeat,
+      linear-gradient(var(--line-2),var(--line-2)) 0 3px/100% 1px no-repeat,
+      linear-gradient(var(--clay),var(--clay)) 0 5px/100% 2px no-repeat,
+      linear-gradient(var(--line),var(--line)) 0 8px/100% 1px no-repeat;
+    opacity:.8; }
+
+  header.nav { position:sticky; top:0; z-index:40; background:color-mix(in srgb,var(--paper) 88%,transparent); backdrop-filter:blur(8px); border-bottom:1px solid var(--line); }
+  .nav-inner { display:flex; align-items:center; justify-content:space-between; height:60px; gap:24px; }
+  .brand { font-family:var(--f-mono); font-size:13px; letter-spacing:.04em; text-decoration:none; color:var(--ink); display:flex; align-items:center; gap:9px; }
+  .brand .dot { width:9px; height:9px; border-radius:50%; background:var(--ochre); box-shadow:0 0 0 3px rgba(168,114,42,0.16); flex:none; }
+  .nav-links { display:flex; gap:24px; }
+  .nav-links a { font-family:var(--f-mono); font-size:12.5px; letter-spacing:.02em; text-decoration:none; color:var(--ink-2); padding:4px 0; border-bottom:1.5px solid transparent; transition:color .18s,border-color .18s; }
+  .nav-links a:hover { color:var(--ochre-dk); border-color:var(--ochre); }
+  @media (max-width:900px){ .nav-links{display:none} }
+
+  .hero { position:relative; overflow:hidden; }
+  .hero-contours { position:absolute; inset:0; z-index:0; pointer-events:none; opacity:.5; }
+  .hero-inner { position:relative; z-index:1; padding-top:clamp(56px,9vw,100px); padding-bottom:clamp(48px,7vw,80px); }
+  .hero-top { display:grid; grid-template-columns:1fr 300px; gap:clamp(28px,5vw,60px); align-items:center; }
+  @media (max-width:820px){ .hero-top{ grid-template-columns:1fr; } }
+
+  .hero-portrait { margin:0; }
+  .hero-portrait img { width:100%; max-width:300px; aspect-ratio:1/1; object-fit:cover; border-radius:16px; border:1px solid var(--line-2); box-shadow:0 22px 48px -24px rgba(22,35,46,.5); display:block; }
+  @media (max-width:820px){
+    .hero-portrait { order:-1; display:flex; justify-content:flex-start; }
+    .hero-portrait img { max-width:132px; border-radius:50%; }
   }
 
-  /* nav */
-  header.nav {
-    position: sticky; top: 0; z-index: 40;
-    background: color-mix(in srgb, var(--paper) 88%, transparent);
-    backdrop-filter: blur(8px); border-bottom: 1px solid var(--line);
-  }
-  .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 60px; gap: 24px; }
-  .brand {
-    font-family: var(--f-mono); font-size: 13px; letter-spacing: .04em;
-    text-decoration: none; color: var(--ink); display: flex; align-items: center; gap: 9px;
-  }
-  .brand .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--ochre); box-shadow: 0 0 0 3px rgba(168,114,42,0.16); flex: none; }
-  .nav-links { display: flex; gap: 24px; }
-  .nav-links a {
-    font-family: var(--f-mono); font-size: 12.5px; letter-spacing: .02em;
-    text-decoration: none; color: var(--ink-2); padding: 4px 0;
-    border-bottom: 1.5px solid transparent; transition: color .18s, border-color .18s;
-  }
-  .nav-links a:hover { color: var(--ochre-dk); border-color: var(--ochre); }
-  @media (max-width: 900px) { .nav-links { display: none; } }
+  .kicker { font-family:var(--f-mono); font-size:12.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--ochre-dk); display:inline-flex; align-items:center; gap:10px; margin-bottom:24px; }
+  .kicker::before { content:""; width:26px; height:1.5px; background:var(--ochre); }
+  h1.name { font-family:var(--f-display); font-weight:500; font-size:clamp(42px,7.4vw,80px); line-height:.98; letter-spacing:-0.015em; margin:0 0 8px; }
+  h1.name .dotted { color:var(--ochre); }
+  .role { font-family:var(--f-display); font-weight:400; font-style:italic; font-size:clamp(18px,2.6vw,24px); color:var(--ink-2); margin:0 0 26px; }
+  .thesis { max-width:56ch; font-size:clamp(16px,1.7vw,18.5px); color:var(--ink-2); margin:0 0 30px; }
 
-  /* hero */
-  .hero { position: relative; overflow: hidden; }
-  .hero-contours { position: absolute; inset: 0; z-index: 0; pointer-events: none; opacity: .5; }
-  .hero-inner { position: relative; z-index: 1; padding-top: clamp(56px, 9vw, 104px); padding-bottom: clamp(48px, 7vw, 80px); }
+  .links { display:flex; flex-wrap:wrap; gap:10px; }
+  .chip { display:inline-flex; align-items:center; gap:8px; font-family:var(--f-mono); font-size:12.5px; letter-spacing:.02em; text-decoration:none; color:var(--ink); padding:8px 14px; border:1px solid var(--line-2); border-radius:999px; background:rgba(255,255,255,0.35); transition:border-color .18s,background .18s,transform .18s; cursor:pointer; }
+  .chip:hover { border-color:var(--ochre); background:rgba(255,255,255,0.7); transform:translateY(-1px); }
+  .chip svg { width:14px; height:14px; flex:none; }
+  .chip.solid { background:var(--ink); color:var(--paper); border-color:var(--ink); }
+  .chip.solid:hover { background:var(--ochre-dk); border-color:var(--ochre-dk); }
 
-  .kicker {
-    font-family: var(--f-mono); font-size: 12.5px; letter-spacing: .06em; text-transform: uppercase;
-    color: var(--ochre-dk); display: inline-flex; align-items: center; gap: 10px; margin-bottom: 26px;
-  }
-  .kicker::before { content: ""; width: 26px; height: 1.5px; background: var(--ochre); }
-
-  h1.name {
-    font-family: var(--f-display); font-weight: 500;
-    font-size: clamp(44px, 8.4vw, 92px); line-height: .98;
-    letter-spacing: -0.015em; margin: 0 0 8px;
-  }
-  h1.name .dotted { color: var(--ochre); }
-  .role {
-    font-family: var(--f-display); font-weight: 400; font-style: italic;
-    font-size: clamp(19px, 3vw, 26px); color: var(--ink-2); margin: 0 0 30px;
-  }
-  .thesis { max-width: 60ch; font-size: clamp(17px, 2vw, 20px); color: var(--ink-2); margin: 0 0 34px; }
-
-  .links { display: flex; flex-wrap: wrap; gap: 10px; }
-  .chip {
-    display: inline-flex; align-items: center; gap: 8px;
-    font-family: var(--f-mono); font-size: 12.5px; letter-spacing: .02em;
-    text-decoration: none; color: var(--ink); padding: 8px 14px;
-    border: 1px solid var(--line-2); border-radius: 999px; background: rgba(255,255,255,0.35);
-    transition: border-color .18s, background .18s, transform .18s; cursor: pointer;
-  }
-  .chip:hover { border-color: var(--ochre); background: rgba(255,255,255,0.7); transform: translateY(-1px); }
-  .chip svg { width: 14px; height: 14px; flex: none; }
-  .chip.solid { background: var(--ink); color: var(--paper); border-color: var(--ink); }
-  .chip.solid:hover { background: var(--ochre-dk); border-color: var(--ochre-dk); }
-
-  .glance {
-    margin-top: 46px; display: grid; grid-template-columns: repeat(4, 1fr);
-    border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
-  }
-  .glance div { padding: 18px 20px 18px 0; border-right: 1px solid var(--line); }
-  .glance div:last-child { border-right: 0; padding-right: 0; }
-  .glance dt { font-family: var(--f-mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--stone); margin-bottom: 6px; }
-  .glance dd { margin: 0; font-size: 15px; line-height: 1.35; font-weight: 500; }
-  @media (max-width: 720px) {
-    .glance { grid-template-columns: 1fr 1fr; }
-    .glance div:nth-child(2) { border-right: 0; padding-right: 0; }
-    .glance div { border-bottom: 1px solid var(--line); }
-    .glance div:nth-last-child(-n+2) { border-bottom: 0; }
+  .glance { margin-top:44px; display:grid; grid-template-columns:repeat(4,1fr); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+  .glance div { padding:18px 20px 18px 0; border-right:1px solid var(--line); }
+  .glance div:last-child { border-right:0; padding-right:0; }
+  .glance dt { font-family:var(--f-mono); font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--stone); margin-bottom:6px; }
+  .glance dd { margin:0; font-size:15px; line-height:1.35; font-weight:500; }
+  @media (max-width:720px){
+    .glance{grid-template-columns:1fr 1fr}
+    .glance div:nth-child(2){border-right:0;padding-right:0}
+    .glance div{border-bottom:1px solid var(--line)}
+    .glance div:nth-last-child(-n+2){border-bottom:0}
   }
 
-  /* sections */
-  section { padding-block: clamp(56px, 8vw, 96px); }
-  .sec-label { font-family: var(--f-mono); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--ochre-dk); margin-bottom: 14px; }
-  h2.sec-title { font-family: var(--f-display); font-weight: 500; font-size: clamp(28px, 4.4vw, 40px); line-height: 1.05; letter-spacing: -0.01em; margin: 0 0 8px; }
-  .sec-head { margin-bottom: 40px; max-width: 64ch; }
-  .sec-head p { color: var(--ink-2); margin: 14px 0 0; }
+  section { padding-block:clamp(56px,8vw,96px); }
+  .sec-label { font-family:var(--f-mono); font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:var(--ochre-dk); margin-bottom:14px; }
+  h2.sec-title { font-family:var(--f-display); font-weight:500; font-size:clamp(28px,4.4vw,40px); line-height:1.05; letter-spacing:-0.01em; margin:0 0 8px; }
+  .sec-head { margin-bottom:40px; max-width:64ch; }
+  .sec-head p { color:var(--ink-2); margin:14px 0 0; }
 
-  .prose p { max-width: 68ch; color: var(--ink-2); margin: 0 0 18px; }
-  .prose p strong { color: var(--ink); font-weight: 600; }
+  .about-grid { display:grid; grid-template-columns:240px 1fr; gap:clamp(28px,5vw,52px); align-items:start; }
+  @media (max-width:760px){ .about-grid{ grid-template-columns:1fr; } }
+  .about-photo img { width:100%; max-width:240px; aspect-ratio:4/5; object-fit:cover; border-radius:12px; border:1px solid var(--line-2); box-shadow:0 16px 36px -22px rgba(22,35,46,.45); display:block; }
+  .about-photo figcaption { font-family:var(--f-mono); font-size:11px; letter-spacing:.03em; color:var(--stone); margin-top:12px; }
+  @media (max-width:760px){ .about-photo img{ max-width:180px; } }
+  .prose p { max-width:66ch; color:var(--ink-2); margin:0 0 18px; }
+  .prose p:last-child { margin-bottom:0; }
+  .prose p strong { color:var(--ink); font-weight:600; }
 
-  /* research thrusts */
-  .thrusts { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-bottom: 52px; }
-  @media (max-width: 780px) { .thrusts { grid-template-columns: 1fr; } }
-  .thrust {
-    border: 1px solid var(--line); border-radius: 10px; padding: 26px 26px 28px;
-    background: rgba(255,255,255,0.4); position: relative;
-  }
-  .thrust .rid { font-family: var(--f-mono); font-size: 12px; color: var(--ochre-dk); letter-spacing: .06em; }
-  .thrust h3 { font-family: var(--f-display); font-weight: 500; font-size: 20px; line-height: 1.2; margin: 8px 0 10px; }
-  .thrust p { margin: 0; font-size: 14.5px; color: var(--ink-2); line-height: 1.55; }
+  .thrusts { display:grid; grid-template-columns:1fr 1fr; gap:22px; margin-bottom:52px; }
+  @media (max-width:780px){ .thrusts{ grid-template-columns:1fr; } }
+  .thrust { border:1px solid var(--line); border-radius:10px; padding:26px 26px 28px; background:rgba(255,255,255,0.4); }
+  .thrust .rid { font-family:var(--f-mono); font-size:12px; color:var(--ochre-dk); letter-spacing:.06em; }
+  .thrust h3 { font-family:var(--f-display); font-weight:500; font-size:20px; line-height:1.2; margin:8px 0 10px; }
+  .thrust p { margin:0; font-size:14.5px; color:var(--ink-2); line-height:1.55; }
 
-  .highlights { border-top: 1px solid var(--line); }
-  .hl {
-    display: grid; grid-template-columns: 200px 1fr; gap: 26px;
-    padding: 22px 0; border-bottom: 1px solid var(--line);
-  }
-  .hl h4 { font-family: var(--f-display); font-weight: 500; font-size: 17px; margin: 0; color: var(--ink); }
-  .hl p { margin: 0; font-size: 14.5px; color: var(--ink-2); }
-  @media (max-width: 680px) { .hl { grid-template-columns: 1fr; gap: 8px; } }
+  .highlights { border-top:1px solid var(--line); }
+  .hl { display:grid; grid-template-columns:210px 1fr; gap:26px; padding:22px 0; border-bottom:1px solid var(--line); }
+  .hl h4 { font-family:var(--f-display); font-weight:500; font-size:17px; margin:0; color:var(--ink); }
+  .hl p { margin:0; font-size:14.5px; color:var(--ink-2); }
+  @media (max-width:680px){ .hl{ grid-template-columns:1fr; gap:8px; } }
 
-  /* interests */
-  .interests { display: flex; flex-wrap: wrap; gap: 10px; }
-  .interest { font-family: var(--f-mono); font-size: 13px; padding: 9px 15px; border: 1px solid var(--line-2); background: var(--panel); border-radius: 6px; color: var(--ink-2); }
-  .interest span { color: var(--ochre-dk); margin-right: 8px; }
+  .interests { display:flex; flex-wrap:wrap; gap:10px; }
+  .interest { font-family:var(--f-mono); font-size:13px; padding:9px 15px; border:1px solid var(--line-2); background:var(--panel); border-radius:6px; color:var(--ink-2); }
+  .interest span { color:var(--ochre-dk); margin-right:8px; }
 
-  /* pub stats */
-  .pubstats { display: flex; flex-wrap: wrap; gap: 0; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; margin-bottom: 40px; }
-  .pubstat { flex: 1 1 0; min-width: 130px; padding: 22px 24px; border-right: 1px solid var(--line); }
-  .pubstat:last-child { border-right: 0; }
-  .pubstat .n { font-family: var(--f-display); font-weight: 600; font-size: 34px; line-height: 1; color: var(--ink); }
-  .pubstat .l { font-family: var(--f-mono); font-size: 11px; letter-spacing: .04em; text-transform: uppercase; color: var(--stone); margin-top: 8px; }
-  @media (max-width: 640px) { .pubstat { flex-basis: 50%; border-bottom: 1px solid var(--line); } .pubstat:nth-child(2){border-right:0} }
+  .pubstats { display:flex; flex-wrap:wrap; border:1px solid var(--line); border-radius:10px; overflow:hidden; margin-bottom:40px; }
+  .pubstat { flex:1 1 0; min-width:130px; padding:22px 24px; border-right:1px solid var(--line); }
+  .pubstat:last-child { border-right:0; }
+  .pubstat .n { font-family:var(--f-display); font-weight:600; font-size:34px; line-height:1; color:var(--ink); }
+  .pubstat .l { font-family:var(--f-mono); font-size:11px; letter-spacing:.04em; text-transform:uppercase; color:var(--stone); margin-top:8px; }
+  @media (max-width:640px){ .pubstat{ flex-basis:50%; border-bottom:1px solid var(--line); } .pubstat:nth-child(2){border-right:0} }
 
-  /* featured pub */
-  .featured {
-    border: 1px solid var(--line-2); border-left: 4px solid var(--ochre);
-    border-radius: 10px; padding: 26px 28px; margin-bottom: 40px;
-    background: linear-gradient(180deg, rgba(168,114,42,0.05), rgba(255,255,255,0.35));
-  }
-  .featured .flag { font-family: var(--f-mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--ochre-dk); margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
-  .featured .flag::before { content: "★"; }
-  .featured h3 { font-family: var(--f-display); font-weight: 500; font-size: 22px; line-height: 1.25; margin: 0 0 8px; }
-  .featured .fa { font-size: 14.5px; color: var(--ink-2); margin: 0 0 3px; } .featured .fa b { color: var(--ink); }
-  .featured .fv { font-size: 14.5px; color: var(--stone); font-style: italic; margin: 0 0 16px; }
+  .featured { border:1px solid var(--line-2); border-left:4px solid var(--ochre); border-radius:10px; padding:26px 28px; margin-bottom:40px; background:linear-gradient(180deg,rgba(168,114,42,0.05),rgba(255,255,255,0.35)); }
+  .featured .flag { font-family:var(--f-mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--ochre-dk); margin-bottom:10px; display:flex; align-items:center; gap:8px; }
+  .featured .flag::before { content:"\2605"; }
+  .featured h3 { font-family:var(--f-display); font-weight:500; font-size:22px; line-height:1.25; margin:0 0 8px; }
+  .featured .fa { font-size:14.5px; color:var(--ink-2); margin:0 0 3px; } .featured .fa b { color:var(--ink); }
+  .featured .fv { font-size:14.5px; color:var(--stone); font-style:italic; margin:0 0 16px; }
 
-  /* pub filter + list */
-  .filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 30px; }
-  .filter-btn {
-    font-family: var(--f-mono); font-size: 12px; letter-spacing: .03em;
-    padding: 7px 14px; border-radius: 999px; cursor: pointer;
-    border: 1px solid var(--line-2); background: transparent; color: var(--ink-2); transition: all .16s;
-  }
-  .filter-btn:hover { border-color: var(--ochre); color: var(--ochre-dk); }
-  .filter-btn[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+  .filters { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:30px; }
+  .filter-btn { font-family:var(--f-mono); font-size:12px; letter-spacing:.03em; padding:7px 14px; border-radius:999px; cursor:pointer; border:1px solid var(--line-2); background:transparent; color:var(--ink-2); transition:all .16s; }
+  .filter-btn:hover { border-color:var(--ochre); color:var(--ochre-dk); }
+  .filter-btn[aria-pressed="true"] { background:var(--ink); color:var(--paper); border-color:var(--ink); }
 
-  ol.pubs { list-style: none; margin: 0; padding: 0; }
-  .pub { display: grid; grid-template-columns: 62px 1fr; gap: 22px; padding: 22px 0; border-top: 1px solid var(--line); }
-  .pub:last-child { border-bottom: 1px solid var(--line); }
-  .pub-year { font-family: var(--f-mono); font-size: 13px; color: var(--stone); padding-top: 3px; }
-  .pub-body { min-width: 0; }
-  .pub-title { font-family: var(--f-display); font-weight: 500; font-size: 19px; line-height: 1.3; margin: 0 0 7px; letter-spacing: -0.005em; }
-  .pub-authors { font-size: 14.5px; color: var(--ink-2); margin: 0 0 4px; }
-  .pub-authors b { color: var(--ink); font-weight: 600; }
-  .pub-venue { font-size: 14.5px; color: var(--stone); font-style: italic; margin: 0 0 12px; }
-  .pub-meta { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
-  .tag { font-family: var(--f-mono); font-size: 10.5px; letter-spacing: .04em; text-transform: uppercase; padding: 4px 9px; border-radius: 4px; border: 1px solid var(--line-2); color: var(--stone); }
-  .tag.j { color: var(--ochre-dk); border-color: color-mix(in srgb, var(--ochre) 45%, var(--line-2)); }
-  .tag.r { color: var(--clay); border-color: color-mix(in srgb, var(--clay) 55%, var(--line-2)); }
-  .tag.status { background: var(--panel); }
-  .doi { font-family: var(--f-mono); font-size: 11.5px; text-decoration: none; color: var(--ink); display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 4px; border: 1px solid var(--line-2); transition: border-color .16s, color .16s; }
-  .doi:hover { border-color: var(--ochre); color: var(--ochre-dk); }
-  .doi svg { width: 12px; height: 12px; }
-  @media (max-width: 600px) { .pub { grid-template-columns: 1fr; gap: 8px; } .pub-year { padding-top: 0; } }
+  ol.pubs { list-style:none; margin:0; padding:0; }
+  .pub { display:grid; grid-template-columns:62px 1fr; gap:22px; padding:22px 0; border-top:1px solid var(--line); }
+  .pub:last-child { border-bottom:1px solid var(--line); }
+  .pub-year { font-family:var(--f-mono); font-size:13px; color:var(--stone); padding-top:3px; }
+  .pub-body { min-width:0; }
+  .pub-title { font-family:var(--f-display); font-weight:500; font-size:19px; line-height:1.3; margin:0 0 7px; letter-spacing:-0.005em; }
+  .pub-authors { font-size:14.5px; color:var(--ink-2); margin:0 0 4px; }
+  .pub-authors b { color:var(--ink); font-weight:600; }
+  .pub-venue { font-size:14.5px; color:var(--stone); font-style:italic; margin:0 0 12px; }
+  .pub-meta { display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+  .tag { font-family:var(--f-mono); font-size:10.5px; letter-spacing:.04em; text-transform:uppercase; padding:4px 9px; border-radius:4px; border:1px solid var(--line-2); color:var(--stone); }
+  .tag.j { color:var(--ochre-dk); border-color:color-mix(in srgb,var(--ochre) 45%,var(--line-2)); }
+  .tag.r { color:var(--clay); border-color:color-mix(in srgb,var(--clay) 55%,var(--line-2)); }
+  .tag.status { background:var(--panel); }
+  .doi { font-family:var(--f-mono); font-size:11.5px; text-decoration:none; color:var(--ink); display:inline-flex; align-items:center; gap:6px; padding:4px 10px; border-radius:4px; border:1px solid var(--line-2); transition:border-color .16s,color .16s; }
+  .doi:hover { border-color:var(--ochre); color:var(--ochre-dk); }
+  .doi svg { width:12px; height:12px; }
+  @media (max-width:600px){ .pub{ grid-template-columns:1fr; gap:8px; } .pub-year{ padding-top:0; } }
 
-  /* timelines */
-  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px, 6vw, 72px); }
-  @media (max-width: 820px) { .cols { grid-template-columns: 1fr; gap: 56px; } }
-  .tl-item { position: relative; padding: 0 0 26px 26px; border-left: 1px solid var(--line); }
-  .tl-item:last-child { padding-bottom: 0; }
-  .tl-item::before { content: ""; position: absolute; left: -5px; top: 5px; width: 9px; height: 9px; border-radius: 50%; background: var(--paper); border: 2px solid var(--ochre); }
-  .tl-when { font-family: var(--f-mono); font-size: 11.5px; letter-spacing: .03em; color: var(--stone); margin-bottom: 5px; }
-  .tl-what { font-family: var(--f-display); font-weight: 500; font-size: 18px; line-height: 1.25; margin: 0 0 3px; }
-  .tl-where { font-size: 14.5px; color: var(--ink-2); margin: 0 0 6px; }
-  .tl-note { font-size: 13.5px; color: var(--stone); margin: 0; }
+  .cols { display:grid; grid-template-columns:1fr 1fr; gap:clamp(40px,6vw,72px); }
+  @media (max-width:820px){ .cols{ grid-template-columns:1fr; gap:56px; } }
+  .tl-item { position:relative; padding:0 0 26px 26px; border-left:1px solid var(--line); }
+  .tl-item:last-child { padding-bottom:0; }
+  .tl-item::before { content:""; position:absolute; left:-5px; top:5px; width:9px; height:9px; border-radius:50%; background:var(--paper); border:2px solid var(--ochre); }
+  .tl-when { font-family:var(--f-mono); font-size:11.5px; letter-spacing:.03em; color:var(--stone); margin-bottom:5px; }
+  .tl-what { font-family:var(--f-display); font-weight:500; font-size:18px; line-height:1.25; margin:0 0 3px; }
+  .tl-where { font-size:14.5px; color:var(--ink-2); margin:0 0 6px; }
+  .tl-note { font-size:13.5px; color:var(--stone); margin:0; }
 
-  /* skills */
-  .skills { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-  @media (max-width: 780px) { .skills { grid-template-columns: 1fr; } }
-  .skill { border: 1px solid var(--line); border-radius: 10px; padding: 24px 26px; background: rgba(255,255,255,0.4); }
-  .skill .sk-h { font-family: var(--f-mono); font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--ochre-dk); margin-bottom: 16px; display: flex; align-items: center; gap: 9px; }
-  .skill .sk-h::before { content: ""; width: 7px; height: 7px; background: var(--ochre); border-radius: 2px; transform: rotate(45deg); }
-  .pills { display: flex; flex-wrap: wrap; gap: 7px; }
-  .pill { font-size: 12.5px; padding: 5px 11px; border: 1px solid var(--line-2); border-radius: 999px; color: var(--ink-2); background: var(--panel); }
+  .skills { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+  @media (max-width:780px){ .skills{ grid-template-columns:1fr; } }
+  .skill { border:1px solid var(--line); border-radius:10px; padding:24px 26px; background:rgba(255,255,255,0.4); }
+  .skill .sk-h { font-family:var(--f-mono); font-size:11.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--ochre-dk); margin-bottom:16px; display:flex; align-items:center; gap:9px; }
+  .skill .sk-h::before { content:""; width:7px; height:7px; background:var(--ochre); border-radius:2px; transform:rotate(45deg); }
+  .pills { display:flex; flex-wrap:wrap; gap:7px; }
+  .pill { font-size:12.5px; padding:5px 11px; border:1px solid var(--line-2); border-radius:999px; color:var(--ink-2); background:var(--panel); }
 
-  /* cards + lists */
-  .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-  @media (max-width: 720px) { .cards { grid-template-columns: 1fr; } }
-  .card { border: 1px solid var(--line); border-radius: 8px; padding: 20px 22px; background: rgba(255,255,255,0.4); }
-  .card h3 { font-family: var(--f-display); font-weight: 500; font-size: 17px; margin: 0 0 4px; }
-  .card p { margin: 0; font-size: 14px; color: var(--stone); }
-  .card .yr { font-family: var(--f-mono); font-size: 11.5px; color: var(--ochre-dk); float: right; }
+  .cards { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  @media (max-width:720px){ .cards{ grid-template-columns:1fr; } }
+  .card { border:1px solid var(--line); border-radius:8px; padding:20px 22px; background:rgba(255,255,255,0.4); }
+  .card h3 { font-family:var(--f-display); font-weight:500; font-size:17px; margin:0 0 4px; }
+  .card p { margin:0; font-size:14px; color:var(--stone); }
+  .card .yr { font-family:var(--f-mono); font-size:11.5px; color:var(--ochre-dk); float:right; }
 
-  ul.plain { list-style: none; margin: 0; padding: 0; }
-  ul.plain li { padding: 14px 0; border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 16px; align-items: baseline; }
-  ul.plain li:last-child { border-bottom: 1px solid var(--line); }
-  ul.plain .li-main { font-size: 15px; }
-  ul.plain .li-sub { display: block; font-size: 13px; color: var(--stone); margin-top: 2px; }
-  ul.plain .li-yr { font-family: var(--f-mono); font-size: 12px; color: var(--stone); white-space: nowrap; }
+  ul.plain { list-style:none; margin:0; padding:0; }
+  ul.plain li { padding:14px 0; border-top:1px solid var(--line); display:flex; justify-content:space-between; gap:16px; align-items:baseline; }
+  ul.plain li:last-child { border-bottom:1px solid var(--line); }
+  ul.plain .li-main { font-size:15px; }
+  ul.plain .li-sub { display:block; font-size:13px; color:var(--stone); margin-top:2px; }
+  ul.plain .li-yr { font-family:var(--f-mono); font-size:12px; color:var(--stone); white-space:nowrap; }
 
-  /* contact */
-  .contact { background: var(--ink); color: var(--paper); }
-  .contact .sec-label { color: color-mix(in srgb, var(--ochre) 70%, #fff); }
-  .contact h2.sec-title { color: var(--paper); }
-  .contact p { color: color-mix(in srgb, var(--paper) 80%, transparent); max-width: 58ch; }
-  .contact-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
-  .contact .chip { color: var(--paper); border-color: rgba(255,255,255,0.22); background: rgba(255,255,255,0.04); }
-  .contact .chip:hover { border-color: var(--ochre); background: rgba(255,255,255,0.1); }
-  .mail { font-family: var(--f-display); font-weight: 500; font-style: italic; font-size: clamp(24px, 4vw, 38px); color: var(--paper); text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.3); transition: border-color .2s; display: inline-block; margin-top: 6px; }
-  .mail:hover { border-color: var(--ochre); }
+  .contact { background:var(--ink); color:var(--paper); }
+  .contact .sec-label { color:color-mix(in srgb,var(--ochre) 70%,#fff); }
+  .contact h2.sec-title { color:var(--paper); }
+  .contact p { color:color-mix(in srgb,var(--paper) 80%,transparent); max-width:58ch; }
+  .contact-links { display:flex; flex-wrap:wrap; gap:12px; margin-top:30px; }
+  .contact .chip { color:var(--paper); border-color:rgba(255,255,255,0.22); background:rgba(255,255,255,0.04); }
+  .contact .chip:hover { border-color:var(--ochre); background:rgba(255,255,255,0.1); }
+  .mail { font-family:var(--f-display); font-weight:500; font-style:italic; font-size:clamp(22px,3.6vw,34px); color:var(--paper); text-decoration:none; border-bottom:1px solid rgba(255,255,255,0.3); transition:border-color .2s; display:inline-block; margin-top:6px; }
+  .mail:hover { border-color:var(--ochre); }
 
-  footer { background: var(--ink); border-top: 1px solid rgba(255,255,255,0.1); color: color-mix(in srgb, var(--paper) 55%, transparent); font-family: var(--f-mono); font-size: 12px; }
-  .foot-inner { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; padding-block: 26px; }
-  footer a { color: color-mix(in srgb, var(--paper) 75%, transparent); text-decoration: none; }
-  footer a:hover { color: var(--ochre); }
+  footer { background:var(--ink); border-top:1px solid rgba(255,255,255,0.1); color:color-mix(in srgb,var(--paper) 55%,transparent); font-family:var(--f-mono); font-size:12px; }
+  .foot-inner { display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; padding-block:26px; }
+  footer a { color:color-mix(in srgb,var(--paper) 75%,transparent); text-decoration:none; }
+  footer a:hover { color:var(--ochre); }
 
-  :focus-visible { outline: 2px solid var(--ochre); outline-offset: 3px; border-radius: 3px; }
+  :focus-visible { outline:2px solid var(--ochre); outline-offset:3px; border-radius:3px; }
 </style>
 </head>
 <body>
 
 <header class="nav">
   <div class="wrap nav-inner">
-    <a class="brand" href="#top"><span class="dot"></span>M. A. Memiş</a>
+    <a class="brand" href="#top"><span class="dot"></span>M. A. Memis</a>
     <nav class="nav-links" aria-label="Section navigation">
       <a href="#about">About</a>
       <a href="#research">Research</a>
@@ -306,40 +240,47 @@
   </svg>
 
   <div class="wrap hero-inner">
-    <span class="kicker">PhD Researcher · Transportation Geotechnics × Data-Centric AI</span>
-    <h1 class="name">Metehan Alp<br>Memiş<span class="dotted">.</span></h1>
-    <p class="role">Interpretable machine learning for civil infrastructure</p>
-    <p class="thesis">
-      I build interpretable, leakage-resistant machine-learning models that learn reliably
-      from large, heterogeneous engineering datasets — and that hold up when the ground,
-      the climate, and the location change.
-    </p>
-
-    <div class="links">
-      <a class="chip solid" href="Metehan_Alp_Memis_CV.pdf" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12"/><path d="m7 12 5 5 5-5"/><path d="M5 21h14"/></svg>
-        Download CV
-      </a>
-      <a class="chip" href="mailto:metehanalp.memis1@outlook.com">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-        Email
-      </a>
-      <a class="chip" href="https://scholar.google.com/citations?user=kkfv-ygAAAAJ&hl=en" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 1 8l11 6 9-4.9V17h2V8L12 2zM5 13.2V17c0 1.7 3.1 3 7 3s7-1.3 7-3v-3.8l-7 3.8-7-3.8z"/></svg>
-        Google Scholar
-      </a>
-      <a class="chip" href="https://orcid.org/0009-0005-3849-7694" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0zM7.4 18H5.6V8.9h1.8V18zM6.5 7.7a1.05 1.05 0 1 1 0-2.1 1.05 1.05 0 0 1 0 2.1zM18.4 18h-1.8v-4.4c0-2.7-3.2-2.5-3.2 0V18h-1.8V8.9h1.8v1c.8-1.5 5-1.6 5 1.4V18z"/></svg>
-        ORCID
-      </a>
-      <a class="chip" href="https://www.researchgate.net/profile/Metehan-Memis-2" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm3.2 15.6c-.3 0-.55-.13-.78-.5l-1.5-2.35h-.9V15c0 .35-.2.55-.55.55h-.2c-.35 0-.55-.2-.55-.55V9c0-.35.2-.55.55-.55h1.9c1.55 0 2.5.9 2.5 2.25 0 1-.5 1.7-1.35 2.05l1.35 2.05c.2.3.05.8-.42.8zm-2.83-3.9c.75 0 1.2-.42 1.2-1.05 0-.6-.45-1-1.2-1h-1v2.05h1z"/></svg>
-        ResearchGate
-      </a>
-      <a class="chip" href="https://www.linkedin.com/in/metehanalpmemis" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
-        LinkedIn
-      </a>
+    <div class="hero-top">
+      <div class="hero-text">
+        <span class="kicker">PhD Researcher &middot; Transportation Geotechnics &times; Data-Centric AI</span>
+        <h1 class="name">Metehan Alp<br>Memis<span class="dotted">.</span></h1>
+        <p class="role">AI and interpretable machine learning for transportation geotechnics</p>
+        <p class="thesis">
+          I use artificial intelligence and interpretable machine learning to make
+          transportation-geotechnics and civil-infrastructure decisions more reliable.
+          I build leakage-resistant models that hold up when the ground, the climate,
+          and the location change.
+        </p>
+        <div class="links">
+          <a class="chip solid" href="Metehan_Alp_Memis_CV.pdf" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12"/><path d="m7 12 5 5 5-5"/><path d="M5 21h14"/></svg>
+            Download CV
+          </a>
+          <a class="chip" href="mailto:mmemis2@illinois.edu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            Email
+          </a>
+          <a class="chip" href="https://scholar.google.com/citations?user=kkfv-ygAAAAJ&hl=en" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 1 8l11 6 9-4.9V17h2V8L12 2zM5 13.2V17c0 1.7 3.1 3 7 3s7-1.3 7-3v-3.8l-7 3.8-7-3.8z"/></svg>
+            Google Scholar
+          </a>
+          <a class="chip" href="https://orcid.org/0009-0005-3849-7694" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0zM7.4 18H5.6V8.9h1.8V18zM6.5 7.7a1.05 1.05 0 1 1 0-2.1 1.05 1.05 0 0 1 0 2.1zM18.4 18h-1.8v-4.4c0-2.7-3.2-2.5-3.2 0V18h-1.8V8.9h1.8v1c.8-1.5 5-1.6 5 1.4V18z"/></svg>
+            ORCID
+          </a>
+          <a class="chip" href="https://www.researchgate.net/profile/Metehan-Memis-2" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm3.2 15.6c-.3 0-.55-.13-.78-.5l-1.5-2.35h-.9V15c0 .35-.2.55-.55.55h-.2c-.35 0-.55-.2-.55-.55V9c0-.35.2-.55.55-.55h1.9c1.55 0 2.5.9 2.5 2.25 0 1-.5 1.7-1.35 2.05l1.35 2.05c.2.3.05.8-.42.8zm-2.83-3.9c.75 0 1.2-.42 1.2-1.05 0-.6-.45-1-1.2-1h-1v2.05h1z"/></svg>
+            ResearchGate
+          </a>
+          <a class="chip" href="https://www.linkedin.com/in/metehanalpmemis" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+      <figure class="hero-portrait">
+        <img src="data:image/jpeg;base64,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" alt="Portrait of Metehan Alp Memis" />
+      </figure>
     </div>
 
     <dl class="glance">
@@ -355,32 +296,40 @@
 <!-- ABOUT -->
 <section id="about">
   <div class="wrap">
-    <p class="sec-label">01 — About</p>
-    <div class="prose">
-      <p>
-        I am a PhD researcher in Civil &amp; Environmental Engineering at the
-        <strong>University of Illinois Urbana-Champaign</strong>, working with
-        Prof. Erol Tutumluer at the intersection of transportation geotechnics and
-        data-centric, interpretable machine learning for civil infrastructure.
-      </p>
-      <p>
-        My work asks how models trained on large engineering datasets can be made
-        <strong>trustworthy</strong>: resistant to data leakage, honest about their limits,
-        able to generalize across climate zones and heterogeneous infrastructure conditions,
-        and interpretable in physically meaningful terms. Recent work drew on
-        <strong>82,682 laboratory measurements from 603 independent LTPP pavement sections
-        across 40 U.S. states</strong> to develop and evaluate interpretable models for
-        resilient-modulus prediction, using section-based partitioning to prevent leakage
-        and SHAP to surface physically meaningful drivers.
-      </p>
-      <p>
-        Alongside pavements, I work on seismic site characterization of critical
-        infrastructure, post-disaster ground-damage assessment, and machine learning for
-        climate-sensitive geosystems such as permafrost. Before the PhD I completed dual
-        M.S. degrees in geotechnical engineering (SIUE and Karabük University, with an
-        Erasmus+ exchange at ESTP Paris) and worked as a transportation and geotechnical
-        engineer on roadway and large-scale construction projects.
-      </p>
+    <p class="sec-label">01 &middot; About</p>
+    <div class="about-grid">
+      <figure class="about-photo">
+        <img src="data:image/jpeg;base64,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" alt="Metehan Alp Memis" />
+        <figcaption>Metehan Alp Memis<br>UIUC, Civil &amp; Environmental Engineering</figcaption>
+      </figure>
+      <div class="prose">
+        <p>
+          I am a PhD researcher in Civil &amp; Environmental Engineering at the
+          <strong>University of Illinois Urbana-Champaign</strong>, working with
+          Prof. Erol Tutumluer on <strong>transportation geotechnics</strong> and
+          <strong>artificial intelligence and machine learning</strong>, building
+          data-centric, interpretable models for pavements, unbound materials, and the
+          infrastructure that carries traffic.
+        </p>
+        <p>
+          My work asks how models trained on large engineering datasets can be made
+          <strong>trustworthy</strong>: resistant to data leakage, honest about their limits,
+          able to generalize across climate zones and heterogeneous infrastructure conditions,
+          and interpretable in physically meaningful terms. Recent work drew on
+          <strong>82,682 laboratory measurements from 603 independent LTPP pavement sections
+          across 40 U.S. states</strong> to develop and evaluate interpretable models for
+          resilient-modulus prediction, using section-based partitioning to prevent leakage
+          and SHAP to surface physically meaningful drivers.
+        </p>
+        <p>
+          Alongside pavements, I work on seismic site characterization of critical
+          infrastructure, post-disaster ground-damage assessment, and machine learning for
+          climate-sensitive geosystems such as permafrost. Before the PhD I completed dual
+          M.S. degrees in geotechnical engineering (SIUE and Karabuk University, with an
+          Erasmus+ exchange at ESTP Paris) and worked as a transportation and geotechnical
+          engineer on roadway and large-scale construction projects.
+        </p>
+      </div>
     </div>
   </div>
 </section>
@@ -390,31 +339,33 @@
 <section id="research">
   <div class="wrap">
     <div class="sec-head">
-      <p class="sec-label">02 — Research</p>
-      <h2 class="sec-title">Reliable learning from real infrastructure data</h2>
+      <p class="sec-label">02 &middot; Research</p>
+      <h2 class="sec-title">Transportation geotechnics, driven by trustworthy AI</h2>
       <p>
-        My projects share one thread: dependable inference from large, messy, real-world
-        engineering datasets — validated honestly and interpreted in ways an engineer can
-        act on. The work spans four connected areas.
+        My PhD centers on <strong>transportation geotechnics and machine learning</strong>:
+        pavements, unbound materials, and the ground beneath transportation infrastructure,
+        with a broader thread of dependable, interpretable inference from large real-world
+        engineering data. The work spans four connected areas, led by R1.
       </p>
     </div>
 
     <div class="thrusts">
       <div class="thrust">
-        <span class="rid">R1</span>
-        <h3>Data-centric &amp; interpretable ML for infrastructure</h3>
+        <span class="rid">R1 &middot; Core</span>
+        <h3>AI and interpretable ML for transportation geotechnics</h3>
         <p>
-          I develop pavement and infrastructure models judged not only on accuracy but on
-          how they were validated and whether their behavior can be explained. My LTPP
-          resilient-modulus framework uses section-based train/test partitioning to remove
-          the data leakage that inflates reported performance, and SHAP analysis to confirm
-          the model's drivers are physically sensible — extended to national-scale pavement
-          deterioration under climate variability.
+          The core of my PhD: machine-learning models for pavements and unbound base and
+          subgrade materials, judged not only on accuracy but on how they were validated and
+          whether their behavior can be explained. My LTPP resilient-modulus framework uses
+          section-based train/test partitioning to remove the data leakage that inflates
+          reported performance, and SHAP analysis to confirm the model's drivers are
+          physically sensible. It extends to national-scale pavement deterioration under
+          climate variability.
         </p>
       </div>
       <div class="thrust">
         <span class="rid">R2</span>
-        <h3>Seismic &amp; critical-infrastructure resilience</h3>
+        <h3>Seismic and critical-infrastructure resilience</h3>
         <p>
           I characterize the seismic exposure of critical facilities and turn it into
           screening tools: a global V<sub>s30</sub>-based site characterization of nuclear
@@ -428,19 +379,19 @@
         <h3>Machine learning for climate-sensitive geosystems</h3>
         <p>
           Cold-region infrastructure is a moving target as permafrost degrades. I combine
-          remote sensing — MODIS land-surface temperature — with machine learning to model
+          remote sensing (MODIS land-surface temperature) with machine learning to model
           permafrost change and its geotechnical implications, integrating domain knowledge
           so predictions stay interpretable to engineers.
         </p>
       </div>
       <div class="thrust">
         <span class="rid">R4</span>
-        <h3>In-situ characterization &amp; geotechnical modeling</h3>
+        <h3>In-situ characterization and geotechnical modeling</h3>
         <p>
           A recurring aim is extracting engineering value from simple field tests. My thesis
           built regression models linking dynamic cone penetration (DCP) data to strength and
-          dynamic soil parameters; related work covers rockfall and rock-slope stability
-          assessment and finite-element modeling of soil–structure interaction in PLAXIS and
+          dynamic soil parameters. Related work covers rockfall and rock-slope stability
+          assessment and finite-element modeling of soil-structure interaction in PLAXIS and
           ABAQUS.
         </p>
       </div>
@@ -453,7 +404,7 @@
         <p>An interpretable resilient-modulus framework built on 82,682 measurements from 603 independent LTPP sections across 40 states, with section-based partitioning to prevent leakage and SHAP for physically meaningful attribution.</p>
       </div>
       <div class="hl">
-        <h4>Climate &amp; domain heterogeneity</h4>
+        <h4>Climate and domain heterogeneity</h4>
         <p>Evaluation of model behavior across climate zones and heterogeneous infrastructure conditions, emphasizing data composition and realistic out-of-section generalization over headline accuracy.</p>
       </div>
       <div class="hl">
@@ -468,14 +419,14 @@
 
     <p class="sec-label" style="margin:44px 0 16px">Research interests</p>
     <div class="interests">
-      <span class="interest"><span>›</span>Data-Centric AI</span>
-      <span class="interest"><span>›</span>Trustworthy &amp; Explainable ML</span>
-      <span class="interest"><span>›</span>Large-Scale Infrastructure Data</span>
-      <span class="interest"><span>›</span>Dataset Quality &amp; Generalization</span>
-      <span class="interest"><span>›</span>Transportation Geotechnics</span>
-      <span class="interest"><span>›</span>Pavement Materials &amp; Performance</span>
-      <span class="interest"><span>›</span>Climate-Resilient Infrastructure</span>
-      <span class="interest"><span>›</span>Seismic &amp; Critical-Infrastructure Resilience</span>
+      <span class="interest"><span>&rsaquo;</span>Data-Centric AI</span>
+      <span class="interest"><span>&rsaquo;</span>Trustworthy &amp; Explainable ML</span>
+      <span class="interest"><span>&rsaquo;</span>Large-Scale Infrastructure Data</span>
+      <span class="interest"><span>&rsaquo;</span>Dataset Quality &amp; Generalization</span>
+      <span class="interest"><span>&rsaquo;</span>Transportation Geotechnics</span>
+      <span class="interest"><span>&rsaquo;</span>Pavement Materials &amp; Performance</span>
+      <span class="interest"><span>&rsaquo;</span>Climate-Resilient Infrastructure</span>
+      <span class="interest"><span>&rsaquo;</span>Seismic &amp; Critical-Infrastructure Resilience</span>
     </div>
   </div>
 </section>
@@ -485,7 +436,7 @@
 <section id="publications">
   <div class="wrap">
     <div class="sec-head">
-      <p class="sec-label">03 — Publications</p>
+      <p class="sec-label">03 &middot; Publications</p>
       <h2 class="sec-title">Publications</h2>
       <p>
         Peer-reviewed journal articles, manuscripts under review, and conference proceedings.
@@ -504,7 +455,7 @@
     <div class="featured">
       <div class="flag">Featured publication</div>
       <h3>Interpretable machine learning framework for resilient modulus estimation of unbound granular base layers: Insights from the LTPP database</h3>
-      <p class="fa"><b>Memiş, M. A.</b>, &amp; Ulus Memiş, S. (2026)</p>
+      <p class="fa"><b>Memis, M. A.</b>, &amp; Ulus Memis, S. (2026)</p>
       <p class="fv">Transportation Geotechnics, 64, 102292</p>
       <a class="doi" href="https://doi.org/10.1016/j.trgeo.2026.102292" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg>doi.org/10.1016/j.trgeo.2026.102292</a>
     </div>
@@ -522,7 +473,7 @@
         <span class="pub-year">2026</span>
         <div class="pub-body">
           <p class="pub-title">Interpretable machine learning framework for resilient modulus estimation of unbound granular base layers: Insights from the LTPP database</p>
-          <p class="pub-authors"><b>Memiş, M. A.</b>, &amp; Ulus Memiş, S.</p>
+          <p class="pub-authors"><b>Memis, M. A.</b>, &amp; Ulus Memis, S.</p>
           <p class="pub-venue">Transportation Geotechnics, 64, 102292</p>
           <div class="pub-meta"><span class="tag j">Journal</span>
             <a class="doi" href="https://doi.org/10.1016/j.trgeo.2026.102292" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg>DOI</a>
@@ -533,7 +484,7 @@
         <span class="pub-year">2026</span>
         <div class="pub-body">
           <p class="pub-title">Global seismic site characterization of nuclear power plant sites using USGS V<sub>s30</sub> data</p>
-          <p class="pub-authors"><b>Memiş, M. A.</b>, &amp; Ulus Memiş, S.</p>
+          <p class="pub-authors"><b>Memis, M. A.</b>, &amp; Ulus Memis, S.</p>
           <p class="pub-venue">Nuclear Engineering and Technology, 104595</p>
           <div class="pub-meta"><span class="tag j">Journal</span>
             <a class="doi" href="https://doi.org/10.1016/j.net.2026.104595" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg>DOI</a>
@@ -544,8 +495,8 @@
         <span class="pub-year">2026</span>
         <div class="pub-body">
           <p class="pub-title">Resilience framework for critical infrastructure: Artificial intelligence applications in post-disaster ground damage assessment</p>
-          <p class="pub-authors"><b>Memiş, M. A.</b>, &amp; Ulus Memiş, S.</p>
-          <p class="pub-venue">Journal of Engineering in Industrial Research, 7(4), 195–211</p>
+          <p class="pub-authors"><b>Memis, M. A.</b>, &amp; Ulus Memis, S.</p>
+          <p class="pub-venue">Journal of Engineering in Industrial Research, 7(4), 195&ndash;211</p>
           <div class="pub-meta"><span class="tag j">Journal</span></div>
         </div>
       </li>
@@ -553,8 +504,8 @@
         <span class="pub-year">2026</span>
         <div class="pub-body">
           <p class="pub-title">Monitoring land surface temperature (LST) changes in Northern Alaska's permafrost regions using MODIS data</p>
-          <p class="pub-authors"><b>Memiş, M. A.</b>, &amp; Ulus Memiş, S.</p>
-          <p class="pub-venue">Journal of Engineering in Industrial Research, 7(3), 91–99</p>
+          <p class="pub-authors"><b>Memis, M. A.</b>, &amp; Ulus Memis, S.</p>
+          <p class="pub-venue">Journal of Engineering in Industrial Research, 7(3), 91&ndash;99</p>
           <div class="pub-meta"><span class="tag j">Journal</span>
             <a class="doi" href="https://doi.org/10.48309/jeires.2026.561167.1325" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg>DOI</a>
           </div>
@@ -564,8 +515,8 @@
         <span class="pub-year">2026</span>
         <div class="pub-body">
           <p class="pub-title">Bridging artificial intelligence and geotechnical engineering through education: A social framework for disaster risk awareness and preparedness</p>
-          <p class="pub-authors"><b>Memiş, M. A.</b>, &amp; Ulus Memiş, S.</p>
-          <p class="pub-venue">Canadian Journal of Educational and Social Studies, 6(1), 114–125</p>
+          <p class="pub-authors"><b>Memis, M. A.</b>, &amp; Ulus Memis, S.</p>
+          <p class="pub-venue">Canadian Journal of Educational and Social Studies, 6(1), 114&ndash;125</p>
           <div class="pub-meta"><span class="tag j">Journal</span>
             <a class="doi" href="https://doi.org/10.53103/cjess.v6i1.443" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg>DOI</a>
           </div>
@@ -575,9 +526,9 @@
         <span class="pub-year">2025</span>
         <div class="pub-body">
           <p class="pub-title">Machine learning-based prediction of permafrost degradation and its implications on geotechnical infrastructure: A comprehensive review</p>
-          <p class="pub-authors"><b>Memiş, M. A.</b>, Keskin, İ., Demir, S., &amp; Ulus Memiş, S.</p>
+          <p class="pub-authors"><b>Memis, M. A.</b>, Keskin, I., Demir, S., &amp; Ulus Memis, S.</p>
           <p class="pub-venue">AI in Civil Engineering, 4(1), 28</p>
-          <div class="pub-meta"><span class="tag j">Journal · Review</span>
+          <div class="pub-meta"><span class="tag j">Journal &middot; Review</span>
             <a class="doi" href="https://doi.org/10.1007/s43503-025-00080-8" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg>DOI</a>
           </div>
         </div>
@@ -586,7 +537,7 @@
         <span class="pub-year">2025</span>
         <div class="pub-body">
           <p class="pub-title">Prediction of soil strength and dynamic properties through the dynamic cone penetration index</p>
-          <p class="pub-authors">Keskin, İ., &amp; <b>Memiş, M. A.</b></p>
+          <p class="pub-authors">Keskin, I., &amp; <b>Memis, M. A.</b></p>
           <p class="pub-venue">Discover Civil Engineering, 2(1), 142</p>
           <div class="pub-meta"><span class="tag j">Journal</span>
             <a class="doi" href="https://doi.org/10.1007/s44290-025-00305-w" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg>DOI</a>
@@ -596,9 +547,9 @@
       <li class="pub" data-type="journal">
         <span class="pub-year">2025</span>
         <div class="pub-body">
-          <p class="pub-title">Stability analyses of rock slopes and improvement solutions: A case of Muğla Bakıçak, Türkiye</p>
-          <p class="pub-authors">Keskin, İ., &amp; <b>Memiş, M. A.</b></p>
-          <p class="pub-venue">Journal of Engineering Research and Reports, 27(7), 1–27</p>
+          <p class="pub-title">Stability analyses of rock slopes and improvement solutions: A case of Mugla Bakicak, Turkiye</p>
+          <p class="pub-authors">Keskin, I., &amp; <b>Memis, M. A.</b></p>
+          <p class="pub-venue">Journal of Engineering Research and Reports, 27(7), 1&ndash;27</p>
           <div class="pub-meta"><span class="tag j">Journal</span>
             <a class="doi" href="https://doi.org/10.9734/jerr/2025/v27i71560" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg>DOI</a>
           </div>
@@ -609,7 +560,7 @@
         <span class="pub-year">2026</span>
         <div class="pub-body">
           <p class="pub-title">A compound seismic screening index for global nuclear power plant sites combining probabilistic rock-PGA hazard with V<sub>s30</sub>-based site conditions</p>
-          <p class="pub-authors"><b>Memiş, M. A.</b>, et al.</p>
+          <p class="pub-authors"><b>Memis, M. A.</b>, et al.</p>
           <p class="pub-venue">Discover Hazards</p>
           <div class="pub-meta"><span class="tag r">Under review</span><span class="tag status">Under revision</span></div>
         </div>
@@ -618,7 +569,7 @@
         <span class="pub-year">2026</span>
         <div class="pub-body">
           <p class="pub-title">Machine learning based prediction of pavement deterioration risk under climate variability: A national-scale analysis using the LTPP database</p>
-          <p class="pub-authors"><b>Memiş, M. A.</b>, et al.</p>
+          <p class="pub-authors"><b>Memis, M. A.</b>, et al.</p>
           <p class="pub-venue">International Journal of Pavement Research and Technology</p>
           <div class="pub-meta"><span class="tag r">Under review</span><span class="tag status">Major revision</span></div>
         </div>
@@ -627,7 +578,7 @@
         <span class="pub-year">2026</span>
         <div class="pub-body">
           <p class="pub-title">Trustworthy explainable artificial intelligence in geotechnical engineering: Methods, validation practices, research gaps, and a proposed reporting framework</p>
-          <p class="pub-authors"><b>Memiş, M. A.</b>, et al.</p>
+          <p class="pub-authors"><b>Memis, M. A.</b>, et al.</p>
           <p class="pub-venue">Civil Engineering Science and Technology Journal</p>
           <div class="pub-meta"><span class="tag r">Under review</span><span class="tag status">Revision with editor</span></div>
         </div>
@@ -635,8 +586,8 @@
       <li class="pub" data-type="review">
         <span class="pub-year">2026</span>
         <div class="pub-body">
-          <p class="pub-title">Enhancing critical infrastructure resilience in seismic-volcanic regions through an integrated geotechnical modeling framework: A transferable methodology from a Türkiye case study</p>
-          <p class="pub-authors"><b>Memiş, M. A.</b>, et al.</p>
+          <p class="pub-title">Enhancing critical infrastructure resilience in seismic-volcanic regions through an integrated geotechnical modeling framework: A transferable methodology from a Turkiye case study</p>
+          <p class="pub-authors"><b>Memis, M. A.</b>, et al.</p>
           <p class="pub-venue">Bulletin of Engineering Geology and the Environment</p>
           <div class="pub-meta"><span class="tag r">Under review</span></div>
         </div>
@@ -645,16 +596,16 @@
         <span class="pub-year">2026</span>
         <div class="pub-body">
           <p class="pub-title">Advancements in rockfall risk management: A systematic review of identification, modeling, and mitigation strategies</p>
-          <p class="pub-authors"><b>Memiş, M. A.</b>, et al.</p>
+          <p class="pub-authors"><b>Memis, M. A.</b>, et al.</p>
           <p class="pub-venue">Discover Civil Engineering</p>
-          <div class="pub-meta"><span class="tag r">Under review · Review</span><span class="tag status">Under revision</span></div>
+          <div class="pub-meta"><span class="tag r">Under review &middot; Review</span><span class="tag status">Under revision</span></div>
         </div>
       </li>
       <li class="pub" data-type="review">
         <span class="pub-year">2026</span>
         <div class="pub-body">
           <p class="pub-title">Predicting permafrost degradation and infrastructure risk in cold regions using machine learning approaches</p>
-          <p class="pub-authors"><b>Memiş, M. A.</b>, et al.</p>
+          <p class="pub-authors"><b>Memis, M. A.</b>, et al.</p>
           <p class="pub-venue">Discover Geoscience</p>
           <div class="pub-meta"><span class="tag r">Under review</span><span class="tag status">Under revision</span></div>
         </div>
@@ -664,7 +615,7 @@
         <span class="pub-year">2024</span>
         <div class="pub-body">
           <p class="pub-title">Estimation of strength and plasticity properties of soils with DCP data</p>
-          <p class="pub-authors">Keskin, İ., &amp; <b>Memiş, M. A.</b></p>
+          <p class="pub-authors">Keskin, I., &amp; <b>Memis, M. A.</b></p>
           <p class="pub-venue">7th International Azerbaijan Congress on Life, Engineering &amp; Mathematical Sciences</p>
           <div class="pub-meta"><span class="tag">Conference</span></div>
         </div>
@@ -673,7 +624,7 @@
         <span class="pub-year">2024</span>
         <div class="pub-body">
           <p class="pub-title">Estimation of shear and dynamic properties of soils with DCP data</p>
-          <p class="pub-authors">Keskin, İ., &amp; <b>Memiş, M. A.</b></p>
+          <p class="pub-authors">Keskin, I., &amp; <b>Memis, M. A.</b></p>
           <p class="pub-venue">8th International "Artemis" Scientific Research Congress</p>
           <div class="pub-meta"><span class="tag">Conference</span></div>
         </div>
@@ -681,8 +632,8 @@
       <li class="pub" data-type="conference">
         <span class="pub-year">2024</span>
         <div class="pub-body">
-          <p class="pub-title">Stability analyses and improvement solutions of rock slopes: The Muğla/Göltürkbükü example</p>
-          <p class="pub-authors">Kahraman, S., <b>Memiş, M. A.</b>, &amp; Keskin, İ.</p>
+          <p class="pub-title">Stability analyses and improvement solutions of rock slopes: The Mugla/Golturkbuku example</p>
+          <p class="pub-authors">Kahraman, S., <b>Memis, M. A.</b>, &amp; Keskin, I.</p>
           <p class="pub-venue">2nd International Palestra Scientific Research Congress</p>
           <div class="pub-meta"><span class="tag">Conference</span></div>
         </div>
@@ -691,7 +642,7 @@
         <span class="pub-year">2024</span>
         <div class="pub-body">
           <p class="pub-title">An evaluation on the effect of water chemistry on soil hydraulic properties</p>
-          <p class="pub-authors">Apul, S., Keskin, İ., <b>Memiş, M. A.</b>, &amp; Ekemen Keskin, T.</p>
+          <p class="pub-authors">Apul, S., Keskin, I., <b>Memis, M. A.</b>, &amp; Ekemen Keskin, T.</p>
           <p class="pub-venue">18th International Istanbul Congress on Life, Engineering &amp; Architecture</p>
           <div class="pub-meta"><span class="tag">Conference</span></div>
         </div>
@@ -700,8 +651,8 @@
         <span class="pub-year">2023</span>
         <div class="pub-body">
           <p class="pub-title">Effect of thermal effect on Atterberg limits: A case of bentonite-sand mixed soil</p>
-          <p class="pub-authors">Necim, A., Keskin, İ., &amp; <b>Memiş, M. A.</b></p>
-          <p class="pub-venue">International Asian Economy and Scientific Research Congress, 163–170</p>
+          <p class="pub-authors">Necim, A., Keskin, I., &amp; <b>Memis, M. A.</b></p>
+          <p class="pub-venue">International Asian Economy and Scientific Research Congress, 163&ndash;170</p>
           <div class="pub-meta"><span class="tag">Conference</span></div>
         </div>
       </li>
@@ -710,8 +661,8 @@
         <span class="pub-year">2026</span>
         <div class="pub-body">
           <p class="pub-title">Dynamic cone penetration testing (DCP) in geotechnical design: Applications, limitations, and innovations for infrastructure assessment</p>
-          <p class="pub-authors"><b>Memiş, M. A.</b>, &amp; Keskin, İ.</p>
-          <p class="pub-venue">Zenodo — technical report / preprint</p>
+          <p class="pub-authors"><b>Memis, M. A.</b>, &amp; Keskin, I.</p>
+          <p class="pub-venue">Zenodo, technical report / preprint</p>
           <div class="pub-meta"><span class="tag">Preprint</span></div>
         </div>
       </li>
@@ -719,8 +670,8 @@
         <span class="pub-year">2024</span>
         <div class="pub-body">
           <p class="pub-title">Estimation of some engineering properties of soils by dynamic cone penetrometer (DCP)</p>
-          <p class="pub-authors"><b>Memiş, M. A.</b></p>
-          <p class="pub-venue">M.S. thesis, Karabük University</p>
+          <p class="pub-authors"><b>Memis, M. A.</b></p>
+          <p class="pub-venue">M.S. thesis, Karabuk University</p>
           <div class="pub-meta"><span class="tag">Thesis</span></div>
         </div>
       </li>
@@ -734,72 +685,72 @@
   <div class="wrap">
     <div class="cols">
       <div>
-        <p class="sec-label">04 — Education</p>
+        <p class="sec-label">04 &middot; Education</p>
         <h2 class="sec-title" style="margin-bottom:32px">Education</h2>
         <div class="tl">
           <div class="tl-item">
-            <p class="tl-when">Aug 2026 — Present</p>
-            <p class="tl-what">Ph.D., Civil &amp; Environmental Engineering — Transportation Geotechnics</p>
+            <p class="tl-when">Aug 2026 &ndash; Present</p>
+            <p class="tl-what">Ph.D., Civil &amp; Environmental Engineering (Transportation Geotechnics)</p>
             <p class="tl-where">University of Illinois Urbana-Champaign (UIUC), IL</p>
-            <p class="tl-note">Advisor: Prof. Erol Tutumluer · Alfred Korn Fellowship</p>
+            <p class="tl-note">Advisor: Prof. Erol Tutumluer &middot; Alfred Korn Fellowship</p>
           </div>
           <div class="tl-item">
-            <p class="tl-when">Aug 2024 — Present</p>
-            <p class="tl-what">M.S., Civil Engineering — Geotechnical Engineering</p>
+            <p class="tl-when">Aug 2024 &ndash; Present</p>
+            <p class="tl-what">M.S., Civil Engineering (Geotechnical Engineering)</p>
             <p class="tl-where">Southern Illinois University Edwardsville (SIUE), IL</p>
-            <p class="tl-note">GPA 3.86 / 4.00 · Requirements completed; conferral expected Dec 2026</p>
+            <p class="tl-note">GPA 3.86 / 4.00 &middot; Requirements completed; conferral expected Dec 2026</p>
           </div>
           <div class="tl-item">
-            <p class="tl-when">Sep 2021 — Feb 2024</p>
-            <p class="tl-what">M.S., Civil Engineering — Geotechnical Engineering</p>
-            <p class="tl-where">Karabük University, Türkiye</p>
-            <p class="tl-note">GPA 3.64 / 4.00 · Thesis on soil strength &amp; dynamic properties from DCP data (TÜBİTAK / KBÜBAP-funded) · Erasmus+ exchange, ESTP Paris (2022–2023)</p>
+            <p class="tl-when">Sep 2021 &ndash; Feb 2024</p>
+            <p class="tl-what">M.S., Civil Engineering (Geotechnical Engineering)</p>
+            <p class="tl-where">Karabuk University, Turkiye</p>
+            <p class="tl-note">GPA 3.64 / 4.00 &middot; Thesis on soil strength and dynamic properties from DCP data (TUBITAK / KBUBAP-funded) &middot; Erasmus+ exchange, ESTP Paris (2022&ndash;2023)</p>
           </div>
           <div class="tl-item">
-            <p class="tl-when">Sep 2016 — Jul 2021</p>
+            <p class="tl-when">Sep 2016 &ndash; Jul 2021</p>
             <p class="tl-what">B.S., Civil Engineering</p>
-            <p class="tl-where">Karabük University, Türkiye</p>
+            <p class="tl-where">Karabuk University, Turkiye</p>
           </div>
         </div>
       </div>
 
       <div id="experience">
-        <p class="sec-label">05 — Experience</p>
+        <p class="sec-label">05 &middot; Experience</p>
         <h2 class="sec-title" style="margin-bottom:32px">Experience</h2>
         <div class="tl">
           <div class="tl-item">
-            <p class="tl-when">Aug 2025 — Aug 2026</p>
-            <p class="tl-what">Graduate Research Assistant — Geotechnical Engineering</p>
+            <p class="tl-when">Aug 2025 &ndash; Aug 2026</p>
+            <p class="tl-what">Graduate Research Assistant, Geotechnical Engineering</p>
             <p class="tl-where">Southern Illinois University Edwardsville</p>
             <p class="tl-note">Thermo-hydro-mechanical soil behavior and nonlinear seismic site response with Python and PLAXIS.</p>
           </div>
           <div class="tl-item">
-            <p class="tl-when">Jan 2025 — Aug 2025</p>
+            <p class="tl-when">Jan 2025 &ndash; Aug 2025</p>
             <p class="tl-what">Graduate Research &amp; Teaching Assistant</p>
             <p class="tl-where">Saint Louis University</p>
             <p class="tl-note">Static and cyclic soil characterization (triaxial, direct shear, consolidation, bender element); undergraduate lab instruction.</p>
           </div>
           <div class="tl-item">
-            <p class="tl-when">May 2024 — Jan 2025</p>
+            <p class="tl-when">May 2024 &ndash; Jan 2025</p>
             <p class="tl-what">Transportation Engineer</p>
             <p class="tl-where">Erbil Engineering / General Directorate of Highways (KGM)</p>
             <p class="tl-note">Roadway alignment, earthwork, and slope-stability analysis with Civil 3D and MicroStation InRoads.</p>
           </div>
           <div class="tl-item">
-            <p class="tl-when">May 2023 — Feb 2024</p>
-            <p class="tl-what">Research Assistant — Geotechnical Engineering</p>
-            <p class="tl-where">Karabük University</p>
-            <p class="tl-note">Regression models linking DCP to CBR, UCS, cohesion, φ, G<sub>max</sub>, V<sub>s</sub>; FE simulation in PLAXIS &amp; ABAQUS.</p>
+            <p class="tl-when">May 2023 &ndash; Feb 2024</p>
+            <p class="tl-what">Research Assistant, Geotechnical Engineering</p>
+            <p class="tl-where">Karabuk University</p>
+            <p class="tl-note">Regression models linking DCP to CBR, UCS, cohesion, friction angle, Gmax, and Vs; FE simulation in PLAXIS and ABAQUS.</p>
           </div>
           <div class="tl-item">
-            <p class="tl-when">Jul 2021 — Jul 2022</p>
+            <p class="tl-when">Jul 2021 &ndash; Jul 2022</p>
             <p class="tl-what">Project Engineer</p>
-            <p class="tl-where">Rönesans Holding / Yazıcı Architectural &amp; Engineering</p>
-            <p class="tl-note">Geotechnical / structural design support on large-scale construction projects.</p>
+            <p class="tl-where">Ronesans Holding / Yazici Architectural &amp; Engineering</p>
+            <p class="tl-note">Geotechnical and structural design support on large-scale construction projects.</p>
           </div>
           <div class="tl-item">
-            <p class="tl-when">2025 — Present</p>
-            <p class="tl-what">Co-Founder — Ankademia</p>
+            <p class="tl-when">2025 &ndash; Present</p>
+            <p class="tl-what">Co-Founder, Ankademia</p>
             <p class="tl-where">AI-powered academic matching platform</p>
             <p class="tl-note">Connecting students and researchers with academic opportunities and mentorship.</p>
           </div>
@@ -814,7 +765,7 @@
 <section id="skills">
   <div class="wrap">
     <div class="sec-head">
-      <p class="sec-label">06 — Technical skills</p>
+      <p class="sec-label">06 &middot; Technical skills</p>
       <h2 class="sec-title">Methods &amp; tools</h2>
       <p>Computational and experimental toolkit spanning data science, numerical modeling, remote sensing, and geotechnical testing.</p>
     </div>
@@ -863,27 +814,28 @@
 <section id="service">
   <div class="wrap">
     <div class="sec-head">
-      <p class="sec-label">07 — Honors &amp; service</p>
+      <p class="sec-label">07 &middot; Honors &amp; service</p>
       <h2 class="sec-title">Awards, funding &amp; peer review</h2>
     </div>
 
     <div class="cards" style="margin-bottom:44px">
       <div class="card"><span class="yr">2026</span><h3>Alfred Korn Fellowship</h3><p>University of Illinois Urbana-Champaign, CEE</p></div>
-      <div class="card"><span class="yr">2026</span><h3>Research Grant for Graduate Students (RGGS)</h3><p>SIUE Graduate School — nonlinear seismic site response of CPT-based profiles, İskenderun</p></div>
+      <div class="card"><span class="yr">2026</span><h3>Research Grant for Graduate Students (RGGS)</h3><p>SIUE Graduate School, for nonlinear seismic site response of CPT-based profiles (Iskenderun)</p></div>
+      <div class="card"><span class="yr">2025&ndash;2026</span><h3>ADSC Midwest Chapter Scholarship</h3><p>The International Association of Foundation Drilling (ADSC), $3,000 Industry Advancement Fund award</p></div>
       <div class="card"><span class="yr">2026</span><h3>MPOWER Monthly Scholarship</h3><p>MPOWER Financing</p></div>
-      <div class="card"><span class="yr">2023–2024</span><h3>TÜBİTAK / KBÜBAP Research Funding</h3><p>Grant KBÜBAP-23-YL-089</p></div>
+      <div class="card"><span class="yr">2023&ndash;2024</span><h3>TUBITAK / KBUBAP Research Funding</h3><p>Grant KBUBAP-23-YL-089</p></div>
     </div>
 
     <p class="sec-label" style="margin-bottom:6px">Peer review</p>
     <ul class="plain">
       <li>
-        <span class="li-main">Reviewer — Journal of Engineering in Industrial Research
+        <span class="li-main">Reviewer, Journal of Engineering in Industrial Research
           <span class="li-sub">Multiple manuscripts across environmental and infrastructure engineering</span>
         </span>
         <span class="li-yr">2026</span>
       </li>
       <li>
-        <span class="li-main">Reviewer — Canadian Journal of Educational and Social Studies
+        <span class="li-main">Reviewer, Canadian Journal of Educational and Social Studies
           <span class="li-sub">Three manuscripts</span>
         </span>
         <span class="li-yr">2026</span>
@@ -895,14 +847,14 @@
 <!-- CONTACT -->
 <section id="contact" class="contact">
   <div class="wrap">
-    <p class="sec-label">08 — Contact</p>
+    <p class="sec-label">08 &middot; Contact</p>
     <h2 class="sec-title">Let's talk research</h2>
     <p>I'm always glad to discuss transportation geotechnics, interpretable ML for infrastructure, and possible collaborations. The fastest way to reach me is email.</p>
-    <a class="mail" href="mailto:metehanalp.memis1@outlook.com">metehanalp.memis1@outlook.com</a>
+    <a class="mail" href="mailto:mmemis2@illinois.edu">mmemis2@illinois.edu</a>
     <div class="contact-links">
       <a class="chip" href="Metehan_Alp_Memis_CV.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
       <a class="chip" href="https://scholar.google.com/citations?user=kkfv-ygAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
-      <a class="chip" href="https://orcid.org/0009-0005-3849-7694" target="_blank" rel="noopener">ORCID · 0009-0005-3849-7694</a>
+      <a class="chip" href="https://orcid.org/0009-0005-3849-7694" target="_blank" rel="noopener">ORCID &middot; 0009-0005-3849-7694</a>
       <a class="chip" href="https://www.researchgate.net/profile/Metehan-Memis-2" target="_blank" rel="noopener">ResearchGate</a>
       <a class="chip" href="https://www.linkedin.com/in/metehanalpmemis" target="_blank" rel="noopener">LinkedIn</a>
     </div>
@@ -911,7 +863,7 @@
 
 <footer>
   <div class="wrap foot-inner">
-    <span>© <span id="year">2026</span> Metehan Alp Memiş · Urbana-Champaign, IL</span>
+    <span>&copy; <span id="year">2026</span> Metehan Alp Memis &middot; Urbana-Champaign, IL</span>
     <span>Built for <a href="https://pages.github.com" target="_blank" rel="noopener">GitHub Pages</a></span>
   </div>
 </footer>
